@@ -1,121 +1,159 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,600&family=Oswald:wght@200;300;400&family=Outfit:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,600&family=Oswald:wght@200;300;400&family=Outfit:wght@300;400;600&family=Poppins:wght@300;400;600;700&display=swap");
 
-body{
-    background-color: hsl(217, 54%, 11%);
-    height: 100%;
-    width: 100%;
-    font-family: 'Outfit', sans-serif;;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container{
-    background-color: hsl(216, 50%, 16%);
-    width: 300px;
-    height: 500px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    border-radius: 10px;
- box-shadow:  4px 4px 20px #000 ;
+body {
+  background-color: hsl(217, 54%, 11%);
+  min-height: 100vh;
+  font-family: "Outfit", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.container__son{
-    margin: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.container {
+  background-color: hsl(216, 50%, 16%);
+  width: 350px;
+  height: 600px;
+  border-radius: 14px;
+  box-shadow: 4px 4px 20px #000;
 }
 
-.img{
-    margin-top: 15px;
-    border-radius: 10px;
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    cursor: pointer;
+.container__son {
+  margin: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-
-.main__container{
-    margin-top: 10px;
+.img__container {
+  position: relative;
+  height: 100%;
 }
 
-.main__title{
-    color: #fff;
-    font-size: 18px;
+.img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-.main__paragraph{
-    font-size: 13px;
-    color: #4b607e;
+.image-hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  display: none;
 }
 
-.info__container{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+.image-hover img {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.price__container{
-    font-size: 14px;
+.img__container:hover .image-hover {
+  display: block;
 }
 
-.eth__img{
-    height: 15px;
-    margin-right: 5px;
+.main__container {
+  margin-top: 1.2rem;
 }
 
-.price{
-    color: #00fff8;
+.main__title {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.time__container{
-    font-size: 14px;
+.main__title:hover {
+  color: #00fff8;
 }
 
-.clock__img{
-    height: 15px;
-    margin-right: 5px;
+.main__paragraph {
+  margin-top: 0.8rem;
+  font-size: 1rem;
+  color: #4b607e;
 }
 
-.time__left{
-    color: #8bacda;
+.info__container {
+    margin-top: 1.4rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
 }
 
-.line{
-    margin-top: 10px;
-    background-color: #4b607e;
-    width: 100%;
-    height: 1px;
+.price__container {
+  font-size: 1rem;
 }
 
-.creator__container{
-    margin-top: 10px;
-    display: grid;
-    grid-template-columns: 35px 1fr;
-    gap: 10px;
+.eth__img {
+  height: 15px;
+  margin-right: 5px;
 }
 
-.creator__avatar{
-    border: 1px solid #fff;
-    border-radius: 50%;
-    margin-top: 10px;
-    height: 30px;
-    width: auto;
+.price {
+  color: #00fff8;
 }
 
-.creator__paragraph{
-    display: inline-block;
-    color: #4b607e;
-    margin-top: 16px;
-    font-size: 14px;
+.time__container {
+  font-size: 1rem;
 }
 
-span{
-    color: #fff;
+.clock__img {
+  height: 15px;
+  margin-right: 5px;
 }
 
+.time__left {
+  color: #8bacda;
+}
 
+.line {
+  margin-top: 2rem;
+  background-color: #4b607e;
+  width: 100%;
+  height: 1px;
+}
 
+.creator__container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  gap: 10px;
+  width: 100%;
+}
 
+.creator__avatar {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-top: 10px;
+  height: 50px;
+  width: auto;
+}
+
+.creator__paragraph {
+  display: inline-block;
+  color: #4b607e;
+  margin-top: 1.4rem;
+  font-size: 1rem;
+}
+
+span {
+  color: #fff;
+}
